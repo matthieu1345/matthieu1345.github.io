@@ -430,6 +430,10 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 50px;
   color: #000;
 }
+
+#fh5co-pricing .price .RedStare {
+	font-size: 30px;
+}
 #fh5co-pricing .price .currency {
   font-size: 20px;
   top: -1.2em;
