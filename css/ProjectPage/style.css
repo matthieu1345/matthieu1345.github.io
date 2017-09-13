@@ -1,0 +1,183 @@
+/*******************************************************
+TITLE: Fixed One-Column #2 Layout (Basic) V1.0 (Beta)
+DATE: 20070807
+AUTHOR: The CSS Tinderbox - http://www.csstinderbox.com
+*******************************************************/
+
+body {
+margin:20px;
+padding:0;
+height:100%;
+background-color:#ffffff;
+color:#000000;  
+text-align:center;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:16px;
+}
+
+a {
+color:#cc0000;
+text-decoration:underline;
+}
+
+a:hover {
+color:#cccccc;
+text-decoration:none;
+}
+
+ul {
+margin:0 0 0 20px;
+list-style-type:disc;
+}
+
+li {
+margin:4px 0 5px 10px;
+}
+
+dl {
+margin:0 0 0 20px;
+}
+
+dt {
+margin:20px 0 5px 10px;
+font-size:1.1em;
+}
+
+dd {
+margin:0 0 0 30px;
+}
+
+
+blockquote {
+margin:1em;
+padding:.5em;
+background-color:PapayaWhip;
+border-top:1px solid #cccccc;
+border-bottom:1px solid #cccccc;
+}
+
+blockquote p {
+margin:.2em;
+}
+
+#container { 	
+margin:0 auto;
+padding:0;
+min-width:400px;
+max-width:1000px;
+width:auto;
+text-align:left;
+vertical-align: middle;	
+background-color:#ffffff;
+border:1px solid #cccccc;
+}
+
+
+
+#header {
+margin:0;
+padding:0;
+height:160px;
+background-color:#2c2c2c;
+}
+
+#header h1 {
+margin:0;
+padding:20px 0 0 20px;
+font-size:1.8em;
+letter-spacing:.1em;
+color:#ffffff;
+font-weight:lighter;
+}
+
+#header h2 {
+margin:0;
+padding:0 0 0 20px;
+font-size:.9em;
+font-weight:lighter;
+letter-spacing:.1em;
+color:PapayaWhip;
+}
+
+#leftColumn {
+float:left;
+margin:0;
+padding:0;
+width:160px;
+font-size:.9em;
+}
+
+#leftColumn p {
+padding:10px;
+background-color: PapayaWhip;
+}
+
+
+#leftColumn h2 {
+margin:0;
+padding:10px 0 0 10px;
+font-size:1em;
+border-right-style:dotted;
+border-right-color:#cccccc;
+border-width:2px;
+}
+
+#leftColumn ul {
+margin:0 0 0 0;
+list-style:none;
+}
+
+#leftColumn li {
+margin:4px 0 5px 10px;
+}
+
+#leftColumn li a {
+text-decoration:underline;
+}
+
+#leftColumn li a:hover{
+text-decoration:none;
+}
+
+#centerColumn { 	
+margin:0 0 0 180px;
+padding:0;
+background-color:#ffffff;
+}
+
+#centerColumn p {
+padding:10px
+}
+
+#centerColumn h2 {
+margin:0;
+padding:10px 0 5px 0;
+font-size:1.3em;
+letter-spacing:.1em;
+}
+
+#footer {
+position:relative;
+bottom:0;
+margin:80px 0 0 0;
+padding:0;
+height:60px;
+line-height:60px;
+text-align:center;
+font-size:.6em;
+background-color:#ffffff;
+border-top:1px solid #cccccc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
