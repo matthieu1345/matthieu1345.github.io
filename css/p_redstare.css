@@ -1,5 +1,5 @@
 a {
-color:#cc0000;
+color:#C8100E;
 text-decoration:underline;
 }
 
@@ -9,18 +9,23 @@ text-decoration:none;
 }
 
 #header {
-	background-color:black;
+background-color:black;
 }
 
 #header h1 {
-	color:#C8100E;
+color:#C8100E;
 }
 
 #header h2 {
-	color:#C8100E;
+color:#C8100E;
 }
 
-#description{
-	background-color:black;
-	color:#cc0000;
+#leftColumn p {
+background-color:black;
+color:#C8100E;
+}
+
+#dataColumn blockquote {
+background-color:black;
+color:#C8100E;	
 }

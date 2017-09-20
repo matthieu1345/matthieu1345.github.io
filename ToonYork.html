@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>A Toon York Story Project Page</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="css/p_reset.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css/p_style.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css/p_ToonYork.css" media="screen" />
+</head>
+<body>
+<div id="container">
+  <div id="header">
+    <h1>A Toon York Story</h1>
+    <h2>AI-Programming
+	<ul>
+		<li>Simple enemies</li>
+		<li>Multi Stage Boss</li>
+	</ul>
+	</h2>
+	<h2>TeamWork</h2>
+  </div>
+  <!--//end #headern//-->
+  <div id="leftColumn">
+    <h2>Go directly to:
+    <ul>
+      <li><a href="index.html">HomePage</a></li>
+      <li><a href="#Simple">Simple enemies (finite state machines)</a></li>
+      <li><a href="#Boss">Multi stage boss (finite state machine)</a></li>
+    </ul></h2>
+    <p>A Toon York Story is a local co-op puzzle platformer about the story of 2 characters, which find their inherited sweets shop and factory taken over by a long lost enemy.</p>
+  </div>
+  <!--//end #leftColumn//-->
+     
+  <div id="dataColumn">
+  <blockquote>
+	<h2>Data:</h2>
+	<p>
+	<ul>
+		<li style="font-size:1.1em;">Platform</li>
+		<ul>
+			<li>PC with controllers</li>
+		</ul>
+		<li style="font-size:1.1em;">Genre</li>
+		<ul>
+			<li>Platformer</li>
+			<li>Local Co-op</li>
+			<li>Adventure</li>
+		</ul>
+		<li style="font-size:1.1em;">Time</li>
+		<ul>
+			<li>Project: September 2016 - Januari 2017</li>
+			<li>Personal: September 2016 - Januari 2017</li>
+		</ul>
+		<li style="font-size:1.1em;">Team</li>
+		<ul>
+			<li>A Toon York Story</li>
+			<li>12 members amount during presence</li>
+		</ul>
+	</ul>
+	</p>
+	</blockquote>
+  </div>
+  <!--//end #dataColumn//-->
+
+  <div id="centerColumn">
+    <h2>General</h2>
+    <p>For A Toon York Story I worked on the ai, which included a few relatively simple enemy ai's, and a bigger boss fight.</p>
+	<p>Unfortunately we could not finish the game, because of a lack of motivation coming from the art side of the team.</p>
+    <h2 id="Simple">Simple Enemies</h2>
+	<p>The simple enemies are all based of off 1 statemachine in which the different states can be turned on and off.
+	<br>For example the first enemy type you come across is very dumb, and only has a walking state enabled, and so can only walk left/right till the platform ends.
+	<br>While the second enemy has a state called "attack player" enabled, with which it will attack the player if he or she is in range.</p>
+	<p style="float: left; margin-left: 100px;">
+	<video id="video1" width="320"><source src="video/drone.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+	<br><button onclick="playPause1()">Play/Pause</button></p>
+	<p style="float: right; margin-right: 100px;">
+	<video id="video2" width="320"><source src="video/shooter.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+	<br><button onclick="playPause2()">Play/Pause</button></p>
+	<p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+	<h2 id="Boss">Multi Stage Boss</h2>
+	<p>a explenation of the multi stage boss</p>
+  </div>
+  <!--//end #centerColumn//-->
+  <div id="footer"> <a target="_blank" href="index.html" title="W3C HTML Validation">Home</a> | <a target="_blank" href="index.html#fh5co-pricing" title="W3C CSS Validation">Projects</a>
+    </p>
+  </div>
+  <!--//end #footer//-->
+</div>
+<!--//end #container//-->
+
+<script>
+var myVideo1 = document.getElementById("video1"); 
+var myVideo2 = document.getElementById("video2"); 
+
+
+
+function playPause1() { 
+    if (myVideo1.paused) 
+        myVideo1.play(); 
+    else 
+        myVideo1.pause(); 
+} 
+
+function playPause2() { 
+    if (myVideo2.paused) 
+        myVideo2.play(); 
+    else 
+        myVideo2.pause(); 
+} 
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+a {
+color:#2AA6C3;
+text-decoration:underline;
+}
+
+a:hover {
+color:#A20139;
+text-decoration:none;
+}
+
+#header {
+background-color:#2AA6C3;
+}
+
+#header h1 {
+color:white;
+}
+
+#header h2 {
+color:white;
+}
+
+#leftColumn p {
+background-color:#2AA6C3;
+color:white;
+}
+
+#dataColumn blockquote {
+background-color:#2AA6C3;
+color:white;	
+}

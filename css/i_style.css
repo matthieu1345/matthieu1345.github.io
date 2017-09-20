@@ -71,10 +71,10 @@ h1, h2, h3, h4, h5, h6 {
   #fh5co-header {
     margin-top: 0;
     background: #fff;
-    -webkit-box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
-    -ms-box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
-    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 0 9px 0 rgba(64, 0, 128, 0.5);
+    -moz-box-shadow: 0 0 9px 0 rgba(64, 0, 128, 0.5);
+    -ms-box-shadow: 0 0 9px 0 rgba(64, 0, 128, 0.5);
+    box-shadow: 0 0 9px 0 rgba(64, 0, 128, 0.5);
   }
   #fh5co-header .navbar-brand {
     color: #6173f4 !important;
@@ -108,7 +108,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #fh5co-header #navbar li a {
   font-family: "Source Sans Pro", Arial, sans-serif;
-  color: rgba(255, 255, 255, 0.5);
+  color: #818892;
   position: relative;
 }
 #fh5co-header #navbar li a span {
@@ -137,7 +137,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.3s ease-in-out 0s;
 }
 #fh5co-header #navbar li a:hover {
-  color: #fff;
+  color: #400080;
 }
 #fh5co-header #navbar li a:hover span:before {
   visibility: visible;
@@ -150,7 +150,7 @@ h1, h2, h3, h4, h5, h6 {
 #fh5co-header #navbar li.active a {
   background: transparent;
   background: none;
-  color: #fff;
+  color: #400080;
 }
 #fh5co-header #navbar li.active a span:before {
   visibility: visible;
@@ -163,15 +163,15 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 30px;
   font-weight: 700;
   padding-left: 0;
-  color: #fff;
+  color: #400080;
 }
 #fh5co-header.navbar-fixed-top {
   position: fixed !important;
   background: #fff;
-  -webkit-box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
-  -ms-box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 9px 0 rgba(64, 0, 128, 0.5);
+  -moz-box-shadow: 0 0 9px 0 rgba(64, 0, 128, 0.5);
+  -ms-box-shadow: 0 0 9px 0 rgba(64, 0, 128, 0.5);
+  box-shadow: 0 0 9px 0 rgba(64, 0, 128, 0.5);
   margin-top: 0px;
   top: 0;
 }
@@ -298,8 +298,20 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+#fh5co-about-us {
+	  -webkit-box-shadow: 0 0 9px 0 rgba(64, 0, 128, 0.5);
+  -moz-box-shadow: 0 0 9px 0 rgba(64, 0, 128, 0.5);
+  -ms-box-shadow: 0 0 9px 0 rgba(64, 0, 128, 0.5);
+  box-shadow: 0 0 9px 0 rgba(64, 0, 128, 0.5);
+}
+
+
 #fh5co-testimonials {
-  background: #6173f4;
+  background:  	#470066;
+  -webkit-box-shadow: 0 0 9px 0 rgba(107, 0, 153, 1);
+  -moz-box-shadow: 0 0 9px 0 rgba(107, 0, 153, 1);
+  -ms-box-shadow: 0 0 9px 0 rgba(107, 0, 153, 1);
+  box-shadow: 0 0 9px 0 rgba(107, 0, 153, 1);
 }
 #fh5co-testimonials .section-heading h2 {
   color: white;
@@ -379,6 +391,13 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 16px;
 }
 
+#fh5co-pricing {
+	  -webkit-box-shadow: 0 0 9px 0 rgba(64, 0, 128, 0.5);
+  -moz-box-shadow: 0 0 9px 0 rgba(64, 0, 128, 0.5);
+  -ms-box-shadow: 0 0 9px 0 rgba(64, 0, 128, 0.5);
+  box-shadow: 0 0 9px 0 rgba(64, 0, 128, 0.5);
+}
+
 #fh5co-pricing .price-box {
   border: 2px solid #ECEEF0;
   text-align: center;
@@ -433,6 +452,10 @@ h1, h2, h3, h4, h5, h6 {
 
 #fh5co-pricing .price .RedStare {
 	font-size: 30px;
+}
+
+#fh5co-pricing .price .ToonYork {
+	font-size: 27px;
 }
 #fh5co-pricing .price .currency {
   font-size: 20px;
