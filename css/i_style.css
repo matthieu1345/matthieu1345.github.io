@@ -378,6 +378,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #fh5co-testimonials .box-testimony blockquote p {
   font-style: italic;
+  color: DimGray;
 }
 #fh5co-testimonials .box-testimony .author {
   line-height: 20px;
@@ -452,6 +453,10 @@ h1, h2, h3, h4, h5, h6 {
 
 #fh5co-pricing .price .RedStare {
 	font-size: 30px;
+}
+
+#fh5co-pricing .price .HalloweenHunt {
+font-size: 29px;
 }
 
 #fh5co-pricing .price .ToonYork {

@@ -1,0 +1,31 @@
+a {
+color:#0e0e3f;
+text-decoration:underline;
+}
+
+a:hover {
+color:GoldenRod;
+text-decoration:none;
+}
+
+#header {
+background-color:#0e0e3f;
+}
+
+#header h1 {
+color:GoldenRod;
+}
+
+#header h2 {
+color:GoldenRod;
+}
+
+#leftColumn p {
+background-color:#0e0e3f;
+color:GoldenRod;
+}
+
+#dataColumn blockquote {
+background-color:#0e0e3f;
+color:GoldenRod;	
+}

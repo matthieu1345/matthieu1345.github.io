@@ -60,6 +60,10 @@ blockquote p {
 margin:.2em;
 }
 
+img {
+margin: 10px 10px 10px 0px;
+}
+
 #container { 	
 margin:0 auto;
 padding:0;
@@ -154,6 +158,10 @@ margin:0;
 padding:10px 0 5px 0;
 font-size:1.3em;
 letter-spacing:.1em;
+}
+
+#centerColumn h3 {
+font-style: italic;
 }
 
 #dataColumn {
