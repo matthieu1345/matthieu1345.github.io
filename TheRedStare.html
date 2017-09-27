@@ -100,22 +100,45 @@
 		This means that each person, has a set of rules, with what they can do when, for example &quot;between 20:00 &amp; 5:00 be at home&quot;.<br>
 		This made it for designers really easy to give the different persons their behavior, and make their puzzles.<br><br>
 		The way those rules where put into behavior for the AI is by a behavior tree consisting of 3 main branches.<br>
-		<img src="images/BehaviorTree.jpg" alt="Behavior Tree" style="width:450px; float:left;"><br>
+		<img src="images/BehaviorTree.jpg" alt="Behavior Tree" title="the base behavior tree" style="width:450px; float:right; margin-left: 10px;"><br>
 		- A branch deciding on the task to do.<br>
 		- A branch for doing a action with only 1 pawn<br>
 		- A branch for doing a action with multiple pawns<br>
-		
+		<br>
+		deciding on a task is really straight forward:
+		<ol style="list-style-type:numeric;">
+		<li>Loop through all the rules, getting id's of the rules that are allowed at the current in game time</li>
+		<li>Select a random of those rules to do</li>
+		<li>Go to the next part of the behavior tree</li>
+		</ol>
+		<br>
+		the actions for a single pawn are also really straight forward, it will just go to the specified location, and do an animation/interaction in this location. before going through with the next task.<br>
+		<br>
+		Actions with more then 1 pawn where more problematic, as here 2 pawns with seperate brains need to work together/wait for eachother.<br>
+		This is done by sending messages to the other pawns saying "you need to do this action at this location now" re-evaluating it's tree, and skipping straight to the multi pawn action.<br>
+		because this is all decided the moment the 1st pawn starts the task, there are moments that a pawn is already in a multi-pawn task with another pawn, breaking that task.<br>
+		To solve this, in the action creation there is a test for if the other pawns are already busy.
 	</p>
 	<h3>What I would do different in the future</h3>
-	<p>add description of doing multi-pawn behavior different</p>
-	<h2 id="cars" style="clear:both">Cars</h2>
+	<p>If i would do the same kind of puzzle ai agian, i would use a different kind of approach.<br>
+	Instead of creating tasks if a pawn needs a new one, idd create a dayly task list with what each character will be doing at the start of the day.</p>
+	<img src="images/CarSplines.jpg" alt="Splines which the cars move over" style="width:250px; float:right; margin-left: 10px;" title="Splines the cars follow">
+	<h2 id="cars">Cars</h2>
 	<h3>How it's made</h3>
-	<p>add description of the car behavior</p>
+	<p>Cars use a spline based movement pattern, over the road there are multiple splines laid out for the cars to follow.<br>
+	When a car is spawned, it will take a random one of these routes, meaning that just like real live, no car will be exactly straight behind the other.<br>
+	This makes it really optimized, as you can calculate a lot of points over these splines in front, and it still keeps it looking real.</p>
 	<h3>What I would do different in the future</h3>
+	<p>For the Cars i'm really satisfied with it. it works really nice and it is really fast.</p>
 	<h2 id="birds">Birds</h2>
 	<h3>How it's made</h3>
-	<p>add description of the birds behavior</p>
+	<p>The birds are fairly simple, there is a manager in charge of the amount of birds in the level. Every time a bird goes too far away, it get's reset to a pre-defined radius from the player.<br>
+	The birds are fairly basic, they only move forward and by way of raycasts spread over the ticks, they check if anything is in front, and they need to turn around.<br>
+	To give the birds some life-like flying patterns, without creating lagg and using much calculations, I put a few invisible blocks in the air, where the birds will fly around, making it very pleasing and lifelike to the player.</p>
 	<h3>What I would do different in the future</h3>
+	<p>If I could have had more time, I would have loved to add some way for the birds to land on top of the roofs or electric poles.<br>
+	I would probably have done this with a "catch collider" which catches the bird, and motions the bird fluently to a place to land.<br>
+	unfortunately I did not have time to make this before the release, and the designers/producer thought they were good enough now, and it was better not to risk breaking them after release.</p>
   </div>
   <!--//end #centerColumn//-->
   <div id="footer"> <a target="_blank" href="index.html" title="Homepage">Home</a> | <a target="_blank" href="index.html#fh5co-pricing" title="Homepage - Projects">Projects</a>
