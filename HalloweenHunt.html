@@ -25,8 +25,10 @@
     <h2>Go Directly To
     <ul>
       <li><a href="index.html">Homepage</a></li>
+	  <li><a href="https://youtu.be/2eUQ5rOWGKI" target="_blank">Trailer</a></li>
     </ul></h2>
-    <p>Halloween Hunt is a game about children playing hide and seek in a playground during halloween.</p>
+    <p>Halloween Hunt is a game about children playing hide and seek in a playground during halloween.<br>
+	The goal for the player is to have the most candy at the end of the game</p>
   </div>
   <!--//end #leftColumn//-->
     
@@ -63,8 +65,32 @@
 
   <div id="centerColumn">
     <h2>General</h2>
-    <p>For halloween hunt I made the AI seeker, which fully reacts to the players behavoir.<br>
-	It starts by walking to a random side of the level, at that location looks around, and follows the player.</p>
+    <p style="margin-left: 160px">For halloween hunt I made the AI seeker, which fully reacts to the players behavoir.<br>
+	The players pitch against eachother to get the most candy (points), and each time theire cought by the seeker, they lose 1 candy<br>
+	It starts by walking to a random side of the level, at that location looks around, and follows the player.<br>
+	It's fully event based, meaning the only thing it will do on tick is walk towards a goal destination. everything else, including what this destination is, is calculated on events<br>
+	This made it a really optimized ai, while it still is a really realistic seeker.</p>
+	<video id="Trailer" width="50%" height="auto" style="float:left; margin: 0 20px 10px 0;" controls><source src="video/HalloweenHuntTrailer.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+	<!--<button onclick="playPauseTrailer()" style="float:left; clear:both;">Play/Pause trailer</button>-->
+	<h2 id="Idle" >Idle</h2>
+	<p>
+		While the seeker has no known player it follows, he will go to random locations in the level.<br>
+		There are 8 checkpoints located in the level, each whith different rotators the seeker will look towards.<br>
+		At reaching one of those locations, a event is fired to choose a new location<br>
+		The event for going to a idle location is called everytime the seeker reaches his goal, and no other mode is fired in the meantime
+	</p>
+	<h2 id="SeenPlayer">Seen player</h2>
+	<p>
+		The seeker has a vision cone which checks once a second for players in sight<br>
+		When a player is seen, a event is fired for going to an active waypoint, this overwrites the idle behavoir and makes the ai go to the location he sees the player.<br>
+		When the seeker is going to the location it last saw a player, it will check twice a second for still seeing the player, and update the active waypoint acordingly.
+		Making him keep track of the player, but also able to lose sight.<br>
+	</p>
+	<h2 id="HeardSound">Heard Sound</h2>
+	<p>
+		To make it a bit harder for players, of to lure the seeker into another player, The player makes a sound when picking up a candy, which lures the seeker to that location.<br>
+		This event is only fired if the ai doesn't already have a player in his sight. Which makes it possible to get candy without getting the seeker following you in some cases.<br>
+	</p>
   </div>
   <!--//end #centerColumn//-->
   <div id="footer"> <a target="_blank" href="index.html" title="W3C HTML Validation">Home</a> | <a target="_blank" href="index.html#fh5co-pricing" title="W3C CSS Validation">Projects</a>
@@ -73,5 +99,20 @@
   <!--//end #footer//-->
 </div>
 <!--//end #container//-->
+
+
+
+<script>
+var Trailer = document.getElementById("Trailer"); 
+
+
+
+function playPauseTrailer() { 
+    if (Trailer.paused) 
+        Trailer.play(); 
+    else 
+        Trailer.pause(); 
+} 
+</script>
 </body>
 </html>
