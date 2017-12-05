@@ -1958,6 +1958,16 @@ pre code {
     width: 1170px;
   }
 }
+@media (min-width: 1475px) {
+  .container {
+    width: 1440px;
+  }
+}
+@media (min-width: 1750px) {
+  .container {
+    width: 1700px;
+  }
+}
 
 .container-fluid {
   margin-right: auto;
