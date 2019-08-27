@@ -15,7 +15,7 @@
 	<meta name="description" content="On this page you will find information about my work on Casino Inc." />
 	
 	<!-- reload every x seconds -->
-	<meta http-equiv="refresh" content="30" />
+	<!-- meta http-equiv="refresh" content="30" />
 	
 	<!-- social media preview stuffs -->
 	<meta property="og:type" content="website" />
@@ -52,7 +52,7 @@
 		<h2>Go directly to:
 		<ul>
 			<li><a href="index.html">Homepage</a></li>
-			<li><a href="#">Link Item</a></li>
+			<li><a href="#GOAP">GOAP</a></li>
 			<li><a href="#">Link Item</a></li>
 			<li><a href="#">Link Item</a></li>
 		</ul></h2>
@@ -83,6 +83,10 @@
 		<ul>
 			<li>just myself</li>
 		</ul>
+		<li style="font-size:1.1em;">Engine</li>
+		<ul>
+			<li>Unreal</li>
+		</ul>
 		</ul>
 		</p>
 		<br></blockquote>
@@ -99,29 +103,82 @@
 		This project has been heavily inspired by games as <a href="https://store.steampowered.com/app/233450/Prison_Architect/" target="steam">Prison Architect</a>, <a href="https://store.steampowered.com/app/521150/Another_Brick_in_The_Mall/" target="steam">Another Brick In The Mall</a>, and <a href="https://store.steampowered.com/app/672630/Academia__School_Simulator/"  target="steam">Academia: School Simulator</a>.<br>
 		Each of these games are top-down tile based management simulations of their respective theme's.<br>
 		<br>
-		A 30 minute powerpoint presentation that I used for the defence can be downloaded using the following link: <a href="Documents\DefencePresentation.pptx" download>powerpoint</a>, <a href="Documents\DefencePresentation.docx" download>script</a></p>
+		A 30 minute powerpoint presentation (with voice over) that I used for the defence can be downloaded using the following link: <a href="Documents\DefencePresentation.pptx" download>powerpoint</a>, <a href="Documents\DefencePresentation.docx" download>script</a></p>
 		<!-- end of General -->
 		
-		<h2>Project Goals</h2>
+		<h2 id="Goals">Project Goals</h2>
+		<p>The goals I've set myself for this project where to make a playable game, and get experience with more advanced AI systems.<br>
+		Both of these goals where to add a new piece of work to my portfolio, and to give me more programming experience.<br>
+		For the AI systems I wanted to use a Goal Orientated Action Planner (GOAP) as I've not used that before, and it's often used in games I like to play.</p>
+		<!-- end of project goals -->
+		
+		<h2 id="Specifications">Specifications</h2>
+		<p>The specifications for the game I made are the following:
+		<ul>
+		<li>The theme is a top down tile-based build your own casino. Where the player get’s freedom to build in whatever way they want.</li>
+		<li>The main gameplay loop is fairly simple:
+		<ol>
+			<li>The player spends the money they have to build/expand their casino.</li>
+			<li>The casino is being build by builder AI’s in the way the player has specified in step 1.</li>
+			<li>Guests come to play games in the casino, making the player money to return to step 1.</li>
+		</ol>
+		</li>
+		<li>Motivation for the player are creativity and bigger is better.</li>
+		</ul></p>
+		<!-- end of Specifications -->
+		
+		<h2 id="Planning">Planning</h2>
+		<p>With this size a project, I needed to plan a lot. I did this by deviding the project in the following 10 milestones:
+		<img src="images/CasinoInc/Milestones.jpg" alt="Milestones" title="Milestones" style="width:400px; float:right; border-style: solid; border-width: 1px;"><br>
+		<ol type="1">
+		<li>2D tile map</li>
+		<li>Basic player interaction</li>
+		<li>Pathfinding</li>
+		<li>AI task manager</li>
+		<li>GOAP planner</li>
+		<li>Casino management</li>
+		<li>Builders</li>
+		<li>Poker, Blackjack, and Slot Machines</li>
+		<li>Guests</li>
+		<li>Dealers</li>
+		</ol><br>
+		Each of these milestones where planned to be between 1 and 3 weeks of work, and to be in such a order that they would build on one another.<br>
+		</p>
+		<!-- end of Planning -->
+		
+		<img src="images/CasinoInc/Tilemap.jpg" alt="Tilemap" title="Tilemap" style="width:300px; float:right;">
+		<h2 id="Tilemap">2D tilemap</h2>
+		<p>The tilemap is the part of the game that shows everything, as the name implies it’s a map made of a grid of tiles.<br>
+		I’ve used this as this is the style that the preview games use to, and it’s a staple of a lot of different other management games.<br>
+		For this I use a combination of Unreals build in tilemap, and my own made tilemap.<br>
+		This combination is made because the unreal tilemap is purely cosmetic, so only draws the tiles, but for this game I need separate behaviours for different type of tiles.<br>
+		The system I made myself to give different tiles different behaviours consists of a list of actors with the bare minimum, which have all information about what type of tile it is, and some shared info like if its walkable and which sprite to use for it. With added on top of this are actor components for the tiles that need additional behavior.
+		</p>
+		<!-- end of 2D tilemap -->
+		
+		<h2 id="Pathfinding">Pathfinding</h2>
+		<p>For Pathfinding of the characters walking around I've implemented a A* algorithm, </p>
+		<!-- end of Pathfinding -->
+		
+		<h2 id="TaskManager">AI Task Manager</h2>
 		<p>explanation of stuff i made!</p>
-		<h2>Specifications</h2>
+		<!-- end of AI Task Manager -->
+		
+		<h2 id="GOAP">GOAP</h2>
 		<p>explanation of stuff i made!</p>
-		<h2>Planning</h2>
+		<!-- end of GOAP -->
+		
+		<h2 id="Staff">Staff</h2>
 		<p>explanation of stuff i made!</p>
-		<h2>2D tilemap</h2>
+		<!-- end of Staff -->
+		
+		<h2 id="Guests">Guests</h2>
 		<p>explanation of stuff i made!</p>
-		<h2>Pathfinding</h2>
+		<!-- end of Guests -->
+		
+		<h2 id="Results">Results</h2>
 		<p>explanation of stuff i made!</p>
-		<h2>AI Task Manager</h2>
-		<p>explanation of stuff i made!</p>
-		<h2>GOAP</h2>
-		<p>explanation of stuff i made!</p>
-		<h2>Staff</h2>
-		<p>explanation of stuff i made!</p>
-		<h2>Guests</h2>
-		<p>explanation of stuff i made!</p>
-		<h2>Results</h2>
-		<p>explanation of stuff i made!</p>
+		<!-- end of Results -->
 		
 		
 		<p><a href="#">Link Item</a></p>

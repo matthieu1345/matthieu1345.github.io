@@ -26,12 +26,12 @@ text-decoration:none;
 }
 
 ul {
-margin:0 0 0 20px;
+margin:0 20px 0 20px;
 list-style-type:disc;
 }
 
 ol {
-	margin:0 0 0 20px;
+margin:0 20px 0 20px;
 }
 
 li {
@@ -150,7 +150,7 @@ text-decoration:none;
 }
 
 #centerColumn { 	
-margin:0 0 0 20px;
+margin:0 20px 0 20px;
 padding:0;
 background-color:#ffffff;
 }
