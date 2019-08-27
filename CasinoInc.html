@@ -41,8 +41,12 @@
 		<h1>Casino Inc</h1>
 		<h2>Management Simulation game</h2>
 		<h2>Solo Graduation Project</h2>
-		<h2>Management Simulation</h2>
-		<h2>AI</h2>
+		<h2>AI
+		<ul>
+			<li>A* pathfinding</li>
+			<li>GOAP</li>
+			<li>Utility Theory</li>
+		</ul></h2>
 		<h2>Game play</h2>
 		<h2>Design</h2>
 	</div>
@@ -52,9 +56,16 @@
 		<h2>Go directly to:
 		<ul>
 			<li><a href="index.html">Homepage</a></li>
+			<li><a href="#Goals">Project Goals</a></li>
+			<li><a href="#Specifications">Specifications</a></li>
+			<li><a href="#Planning">Planning</a></li>
+			<li><a href="#Tilemap">2D tilemap</a></li>
+			<li><a href="#Pathfinding">Pathfinding</a></li>
+			<li><a href="#TaskManager">AI Task Manager</a></li>
 			<li><a href="#GOAP">GOAP</a></li>
-			<li><a href="#">Link Item</a></li>
-			<li><a href="#">Link Item</a></li>
+			<li><a href="#Staff">Staff</a></li>
+			<li><a href="#Guests">Guests</a></li>
+			<li><a href="#Results">Results</a></li>
 		</ul></h2>
 			<p><br>Casino Inc is a project I did for my graduation on IGAD.<br>
 			It is a top-down management simulation game, where the player builds his own casino.<br><br></p>
@@ -112,6 +123,7 @@
 		For the AI systems I wanted to use a Goal Orientated Action Planner (GOAP) as I've not used that before, and it's often used in games I like to play.</p>
 		<!-- end of project goals -->
 		
+		<img src="images/CasinoInc/PreviewPicture.jpg" alt="Preview" title="Preview" style="width:400px; float:left; border-style: solid; border-width: 1px; margin-top:4em"><br>
 		<h2 id="Specifications">Specifications</h2>
 		<p>The specifications for the game I made are the following:
 		<ul>
@@ -129,7 +141,7 @@
 		
 		<h2 id="Planning">Planning</h2>
 		<p>With this size a project, I needed to plan a lot. I did this by deviding the project in the following 10 milestones:
-		<img src="images/CasinoInc/Milestones.jpg" alt="Milestones" title="Milestones" style="width:400px; float:right; border-style: solid; border-width: 1px;"><br>
+		<img src="images/CasinoInc/Milestones.jpg" alt="Milestones" title="Milestones" style="width:400px; float:right; border-style: solid; border-width: 1px; margin-top:3em"><br>
 		<ol type="1">
 		<li>2D tile map</li>
 		<li>Basic player interaction</li>
@@ -148,7 +160,7 @@
 		
 		<img src="images/CasinoInc/Tilemap.jpg" alt="Tilemap" title="Tilemap" style="width:300px; float:right;">
 		<h2 id="Tilemap">2D tilemap</h2>
-		<p>The tilemap is the part of the game that shows everything, as the name implies it’s a map made of a grid of tiles.<br>
+		<p style="padding-bottom:3em">The tilemap is the part of the game that shows everything, as the name implies it’s a map made of a grid of tiles.<br>
 		I’ve used this as this is the style that the preview games use to, and it’s a staple of a lot of different other management games.<br>
 		For this I use a combination of Unreals build in tilemap, and my own made tilemap.<br>
 		This combination is made because the unreal tilemap is purely cosmetic, so only draws the tiles, but for this game I need separate behaviours for different type of tiles.<br>
@@ -156,16 +168,36 @@
 		</p>
 		<!-- end of 2D tilemap -->
 		
+		<video width="50%" height="auto" style="float:left; margin: 0 20px 10px 0;" controls><source src="video/CasinoInc_Pathfinding.mp4" type="video/mp4">Your browser does not support the video tag.</video>
 		<h2 id="Pathfinding">Pathfinding</h2>
-		<p>For Pathfinding of the characters walking around I've implemented a A* algorithm, </p>
+		<p>For Pathfinding of the characters walking around I've implemented a <a href="https://en.wikipedia.org/wiki/A*_search_algorithm" target="wiki">A* algorithm</a>, which is a widely used best-first search.<br>
+		The combination between this algorithm and the tilemap was straight forward, and it uses the tiles as nodes.<br>
+		To make it that the game still has a normal fps, I needed to make this pathfinding multi-threaded which is not the most easy thing to do in unreal engine.<br>
+		The biggest problem for this is that there's barely any documentation on this, and the biggest sources are outdated and incorrect.<br>
+		As a thread safe way of returning the found paths to the main thread, I first got to the Delegate's that unreal has build in, that according to multiple sources are thread safe, but ended up not being safe.<br>
+		Instead of this I needed to use a TQueue, which is a queue that is thread safe, as long as you only take out of it from the main thread, but you're still allowed to put things onto it from any sub thread you want.</p>
 		<!-- end of Pathfinding -->
 		
+		<img src="images/CasinoInc/TaskManager.jpg" alt="TaskManager" title="TaskManager" style="width:300px; float:right; margin-top:2em">
 		<h2 id="TaskManager">AI Task Manager</h2>
-		<p>explanation of stuff i made!</p>
+		<p>To keep track of which tasks the player gives to the AI’s, there’s also the need of a AI Task Manager.<br>
+		This consists of a actor with as main function 2 hybrid First in first out queue’s, with the addition that it will take the first task allowed for the AI in question, so not always the very first task.<br>
+		Example of this is when there’s a queue of building 2 walls, cleaning trash, building another wall, and working at a poker table.<br>
+		The returned task for a dealer will be the work at a table task and not the build wall task, because he can’t do any of the others.<br>
+		Another thing that I wanted to have added to the task queue is a way to take tasks to the front of the queue to prioritize them, this was done by simply adding a 2nd queue which will be worked in a similar way, but always checked before the normal queue.
+		</p>
 		<!-- end of AI Task Manager -->
 		
+		<video width="50%" height="auto" style="float:left; margin: 3em 20px 1em 0;" controls><source src="video/CasinoInc_GOAP.mp4" type="video/mp4">Your browser does not support the video tag.</video>
 		<h2 id="GOAP">GOAP</h2>
-		<p>explanation of stuff i made!</p>
+		<p>For the AI decision making I wanted to use a system I’ve not used before, which is a Goal Oriented Action Planner, or GOAP for short.<br>
+		GOAP is a system where the AI plans a set of actions that will take it from its current state till a specified goal state.<br>
+		For example, a builder wanting to build a wall would need building tools, and building materials.<br>
+		An AI using GOAP will then be able to think out itself that it needs to pickup these tools from a tool storage, and materials from a storage room before it can go to the build location.<br>
+		But if the AI already has tools, it creates a plan of action with only getting materials before going to the build task.<br>
+		For this action planning I’ve used an algorithm very close to A star pathfinding, but instead of location nodes, it’s using the actions as nodes.<br>
+		The start and end of the path are the states that the AI needs/has, and using the difference between this as heuristics you can create a path from action to action between the goal and start.
+		</p>
 		<!-- end of GOAP -->
 		
 		<h2 id="Staff">Staff</h2>
