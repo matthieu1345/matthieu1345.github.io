@@ -14,8 +14,6 @@
 	<title>Casino Inc Project Page</title>
 	<meta name="description" content="On this page you will find information about my work on Casino Inc." />
 	<link rel="shortcut icon" href="favicon.ico">
-	<!-- reload every x seconds -->
-	<!-- meta http-equiv="refresh" content="30" />
 	
 	<!-- social media preview stuffs -->
 	<meta property="og:type" content="website" />
@@ -114,7 +112,11 @@
 		This project has been heavily inspired by games as <a href="https://store.steampowered.com/app/233450/Prison_Architect/" target="steam">Prison Architect</a>, <a href="https://store.steampowered.com/app/521150/Another_Brick_in_The_Mall/" target="steam">Another Brick In The Mall</a>, and <a href="https://store.steampowered.com/app/672630/Academia__School_Simulator/"  target="steam">Academia: School Simulator</a>.<br>
 		Each of these games are top-down tile based management simulations of their respective theme's.<br>
 		<br>
-		A 30 minute powerpoint presentation (with voice over) that I used for the defence can be downloaded using the following link: <a href="Documents\DefencePresentation.pptx" download>powerpoint</a>, <a href="Documents\DefencePresentation.docx" download>script</a></p>
+		A 30 minute powerpoint presentation (with voice over) that I used for the defence can be downloaded using the following links: <a href="Documents\DefencePresentation.pptx" download>powerpoint</a>, <a href="Documents\DefencePresentation.docx" download>script</a><br>
+		<br>
+		Additionally, the full source can be found on github using <a href="https://github.com/matthieu1345/CasinoInc/tree/master/Casino_Inc" target="github">this link</a>.<br>
+		And the latest builds can be found <a href="https://github.com/matthieu1345/CasinoInc/releases" target="releases">here</a>.
+		</p>
 		<!-- end of General -->
 		
 		<h2 id="Goals">Project Goals</h2>
@@ -155,6 +157,8 @@
 		<li>Dealers</li>
 		</ol><br>
 		Each of these milestones where planned to be between 1 and 3 weeks of work, and to be in such a order that they would build on one another.<br>
+		Expansion on the planning has been done using the scrum boards of <a href="https://hacknplan.com/" target="hacknplan">HackNPlan</a>.<br>
+		Using the planning tools given by HackNPlan I scheduled all different milestones and smaller tasks within these milestones.
 		</p>
 		<!-- end of Planning -->
 		
@@ -175,7 +179,9 @@
 		To make it that the game still has a normal fps, I needed to make this pathfinding multi-threaded which is not the most easy thing to do in unreal engine.<br>
 		The biggest problem for this is that there's barely any documentation on this, and the biggest sources are outdated and incorrect.<br>
 		As a thread safe way of returning the found paths to the main thread, I first got to the Delegate's that unreal has build in, that according to multiple sources are thread safe, but ended up not being safe.<br>
-		Instead of this I needed to use a TQueue, which is a queue that is thread safe, as long as you only take out of it from the main thread, but you're still allowed to put things onto it from any sub thread you want.</p>
+		Instead of this I needed to use a TQueue, which is a queue that is thread safe, as long as you only take out of it from the main thread, but you're still allowed to put things onto it from any sub thread you want.<br>
+		Source code for the pathfinding can be found at <a href="https://github.com/matthieu1345/CasinoInc/tree/master/Casino_Inc/Source/Casino_Inc/PathFinding" target="Gist">this link</a>.
+		</p>
 		<!-- end of Pathfinding -->
 		
 		<img src="images/CasinoInc/TaskManager.jpg" alt="TaskManager" title="TaskManager" style="width:300px; float:right; margin-top:2em">
@@ -201,32 +207,34 @@
 		<!-- end of GOAP -->
 		
 		<h2 id="Staff">Staff</h2>
-		<p>explanation of stuff i made!</p>
+		<p>The staff is currently made up of builders and dealers, but written in such a way that its easily expandable to include other jobs like janitors, guards, or waiters.<br>
+		They do their respective tasks using the before explained manager and GOAP systems.<br>
+		The player has to hire each person in staff, and is in full control to give them different working times and lenghts.<br>
+		</p>
 		<!-- end of Staff -->
 		
-		<h2 id="Guests">Guests</h2>
-		<p>explanation of stuff i made!</p>
+		<h2 id="Guests">Guests using Utility Theory</h2>
+		<p>The main element to make the game a simulation, The guests walk around the casino playing different games that make the player money.<br>
+		They're setup with a Utility Theory setup to decide on what they want to do. The way this is setup is that each type of interactable has their own score, with a calculation based on the current stats of the guest to influence this score further.<br>
+		When each score is calculated, the results are used as a weighted chance for what the guest is actually going to do.<br>
+		This way, the behaviour of the guests is expandable, but keeps being very light weighted, and won't impact the games performace much.
+		</p>
 		<!-- end of Guests -->
 		
 		<h2 id="Results">Results</h2>
-		<p>explanation of stuff i made!</p>
+		<p>This all has come together in a small game I’ve been calling Casino Inc.<br>
+		I am very happy with how it all ended up working and looking, and think I’ve made a very fun little game. Which also works very well.<br>
+		The player is able to fully build and run their own casino, and watch the guests go around it playing the games.<br>
+		This also gives a good basis which can still be expanded massively, for example with the guests needing food and drinks, more games, and more types of AIs such as janitors to keep everything clean.<br>
+		All with all, I am very proud of what I’ve managed to do in the alloted time, and how it all went without very big disappointments.
+		</p>
 		<!-- end of Results -->
 		
-		
-		<p><a href="#">Link Item</a></p>
-		<ul>
-		<li>List Item</li>
-		<li>List Item</li>
-		<li>List Item
-		<ul>
-			<li>List Item</li>
-			<li>List Item</li>
-		</ul>
-		</li>
-		</ul>
 		<blockquote>
-		<p><strong>blockquote</strong><br />
-			Augur et fulgente decorus arcu Phoebus acceptusque novem Camenis, qui salutari levat arte fessos corporis artus.</p>
+		<p>A 30 minute powerpoint presentation (with voice over) that I used for the defence can be downloaded using the following links: <a href="Documents\DefencePresentation.pptx" download>powerpoint</a>, <a href="Documents\DefencePresentation.docx" download>script</a><br>
+		<br>
+		Additionally, the full source can be found on github using <a href="https://github.com/matthieu1345/CasinoInc/tree/master/Casino_Inc" target="github">this link</a>.<br>
+		And the latest builds can be found <a href="https://github.com/matthieu1345/CasinoInc/releases" target="releases">here</a>.</p>
 		</blockquote>
 	</div>
 	<!--//end #centerColumn//-->
