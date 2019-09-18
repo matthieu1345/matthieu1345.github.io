@@ -3,30 +3,34 @@
       xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-  <loc>http://www.vandenberggames.com/</loc>
+  <loc>https://www.vandenberggames.com/</loc>
   <lastmod>2018-10-11T11:40:14+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>http://www.vandenberggames.com/index.html</loc>
+  <loc>https://www.vandenberggames.com/index.html</loc>
   <lastmod>2018-04-14T19:16:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.vandenberggames.com/TheRedStare.html</loc>
+  <loc>https://www.vandenberggames.com/TheRedStare.html</loc>
   <lastmod>2018-04-14T19:16:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.vandenberggames.com/HalloweenHunt.html</loc>
+  <loc>https://www.vandenberggames.com/HalloweenHunt.html</loc>
   <lastmod>2018-04-14T19:16:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.vandenberggames.com/ToonYork.html</loc>
+  <loc>https://www.vandenberggames.com/ToonYork.html</loc>
   <lastmod>2018-04-14T19:16:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
-
+<url>
+  <loc>https://www.vandenberggames.com/CasinoInc.html</loc>
+  <lastmod>2019-07-28T19:16:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
 
 </urlset>
