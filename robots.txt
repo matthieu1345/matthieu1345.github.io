@@ -1,1 +1,3 @@
+User-agent: *
+Allow: /
 Sitemap: http://www.vandenberggames.com/sitemap.xml
